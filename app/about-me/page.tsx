@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import ServiceSlider from '@/components/ServiceSlider'
 
-const page = () => {
+const Page = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
