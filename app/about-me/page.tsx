@@ -32,7 +32,7 @@ const Page = () => {
          <span className="text-blue-600">.</span>
         </h1>
         <p className='max-w-[450px] font-sans text-white text-[18px] pb-[130px] md:pb-0'>
-      I mentioned my all skills from the beginning of my journey. Here, I show my skills, which I've focused on. You can check them out in this card{' '}
+      I mentioned my all skills from the beginning of my journey. Here, I show my skills, which I&rsquo;ve focused on. You can check them out in this card{' '}
       {isSmallScreen ? '👇' : '👉'}
     </p>
         {/* <p className='max-w-[450px] text-gray-400 text-[16px] pb-[130px] md:pb-0'>I mentioned my all skills from the beginning of my journey. Here, I shows my all skills which I give focused into it. You can check it out in this cart 👇</p> */}
