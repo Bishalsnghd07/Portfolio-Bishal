@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "next-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,19 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@tsparticles/engine": "^3.0.3",
+    "@tsparticles/react": "^3.0.0",
+    "framer-motion": "^10.16.4",
+    "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-icons": "^4.11.0",
+    "react-tsparticles": "^2.12.2",
+    "swiper": "^10.3.1",
+    "tsparticles": "^2.12.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "13.5.4",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5"
   }
 }

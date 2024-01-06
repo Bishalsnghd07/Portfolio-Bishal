@@ -1,0 +1,119 @@
+import { 
+    RxDiscordLogo, 
+    RxGithubLogo, 
+    RxLinkedinLogo,
+    RxHome,
+    RxPerson,
+    RxDashboard,
+    RxReader,
+    RxCrop,
+    RxPencil2,
+    RxAccessibility,
+    RxDesktop,
+    RxRocket,
+    } 
+    from "react-icons/rx";
+
+export const Socials = [
+    {
+        name:"Linkedin",
+        src: "/discord.svg",
+    },
+    {
+        name:"GithubLogo",
+        src: "/facebook.svg",
+    },
+    {
+        name:"DiscordLogo",
+        src: "/instagram.svg",
+    }
+]
+
+export const NavLinks = [
+    {
+      name: "Home",
+      icon: RxHome,
+      link: "/",
+    },
+    {
+      name: "About me",
+      icon: RxPerson,
+      link: "/about-me",
+    },
+    {
+      name: "Projects",
+      icon: RxDashboard,
+      link: "/project",
+    },
+  ];
+
+  export const ProImages = [
+    {
+      src: "/space/RenewalsTransactions.png",
+    },
+    {
+      src: "/space/Skills.png",
+    },
+    {
+      src: "/space/RenewalsGraph.png",
+    },
+    {
+      src: "/space/VideoStreaming.jpeg",
+    },
+  ];
+  
+  export const ProImages2 = [
+    {
+      src: "/projects/E-Commerce.png",
+    },
+    {
+      src: "/projects/Stack-overflow.png",
+    },
+    {
+      src: "/projects/Car-Rental.png",
+    },
+    {
+      src: "/projects/Myntra.png",
+    },
+  ];
+  
+  export const ServiceData = [
+    {
+      icon: RxReader,
+      title: "React JS",
+      content: "React is a JavaScript library for building user interfaces. React is used to build single-page applications and...",
+      backgroundImage: "/space/SpaceCity7.jpeg",
+    },
+    {
+      icon: RxCrop,
+      title: "Next JS",
+      content: "Next.js runs top of the React. It allows ssr, file based routing and many more which makes fastest build... ",
+      backgroundImage: "/space/SpaceCity9.jpeg",
+    },
+    {
+      icon: RxPencil2,
+      title: "TypeScript",
+      content: "TypeScript adds static typing to JavaScript, it is most preffered language considered by next.js...",
+      backgroundImage: "/space/SpaceCity1.jpg",
+    },
+    {
+      icon: RxDesktop,
+      title: "JavaScript",
+      content: "Highly used and one of the most popular language for using in frontend Development and websites building.",
+      // In starting JavaScript has been created to replace Java for doing small scripting tasks..
+      backgroundImage: "/space/SpaceCity6.jpeg",
+    },
+    {
+      icon: RxAccessibility,
+      title: "Tailwind CSS",
+      content: "Modern and highly recommended CSS framework. It's utility first fundamentals makes easy to customize and...",
+      // and this makes it different from others
+      backgroundImage: "/space/SpaceCity5.jpeg",
+    },
+    {
+      icon: RxRocket,
+      title: "HTML",
+      content: "My web development journey starts from HTML without it we can't make structure of web application for now.",
+      backgroundImage: "/space/SpaceCity8.jpeg",
+    },
+  ];
