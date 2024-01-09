@@ -9,7 +9,7 @@ export default function Home() {
       </div>
       
       <div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[482px] rounded-md">
-  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[529px] xl:h-[472px] hidden xl:block">
+  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[529px] xl:h-[472px] hidden 2xl:block">
     <div className="flex items-center justify-center w-[220px] h-[220px] xl:w-[549px] xl:h-[492px]">
       <Image
         src="/BishalSinghDeo1.png"
@@ -30,7 +30,7 @@ export default function Home() {
         className="absolute left-0 top-0"
       />
 
-      <div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40 pt-28">
+      <div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40 pt-56 lg:pt-28">
         <h1 className="text-[50px] text-white max-w-[550px]"> Frontend{" "}
          <span className="text-red-600">Developer👋</span>
          <p className='text-white text-lg'>Hi, I am Bishal, passionate frontend developer experience in creating Web application, Mobile application, API Integration and Software development. Check out my projects and skills.</p>

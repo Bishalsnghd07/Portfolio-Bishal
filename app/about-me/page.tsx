@@ -26,7 +26,7 @@ const Page = () => {
   }, []);
   
   return (
-    <div className="flex items-center min-h-screen bg-cover bg-[#ddc92a]">
+    <div className="flex items-center min-h-screen bg-cover bg-[#ddb02a]">
       <div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40">
         <h1 className="text-[50px] text-blue-600 max-w-[500px]">My Skills
          <span className="text-blue-600">.</span>
