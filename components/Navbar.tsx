@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React, {useState} from 'react'
 import { Transition } from '@headlessui/react'
 import search from '../public/search.svg'
+import Link from 'next/link'
 
 
 export default function Navbar () 
@@ -13,12 +14,14 @@ export default function Navbar ()
     const [toggle, setToggle] = useState(false);
 
   return (
-     <div className="fixed top-0 bg-transparent z-[20] flex md:px-60 w-full gap-5 justify-between p-5 cursor-pointer">
+    <div className="fixed top-0 bg-transparent z-[20] flex md:px-60 w-full gap-5 justify-between p-5 cursor-pointer">
+       <Link href="/">
       <h1 className="text-white text-[45px]">
         Bishal <span className='font-thin text-yellow-600'>Singh </span>
         <span className="text-blue-500">Deo</span>
         <span className='text-red-600'>.</span>
       </h1>
+    </Link>
       {/* <Image className="pointer" src={search} alt="search_icon" width={17} height={17} /> */}
 
       <Transition

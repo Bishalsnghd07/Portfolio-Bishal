@@ -12,8 +12,10 @@ import Image from "next/image";
 
 import React from 'react'
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const ProjectSlider = () => {
+    const router = useRouter()
   return (
     <div className="w-[85%] md:w-[40%]">
         <Swiper 
@@ -46,15 +48,16 @@ const ProjectSlider = () => {
                        
                         <div className="cursor-pointer absolute inset-0 bg-gradient-to-r from-purple-800 via-pink-500 to-purple-800 opacity-0 group-hover:opacity-70 transition-opacity duration-200" />
                             <div className="cursor-pointer absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white">
-                       <Link href='/Blog'> View Project
+                                    <Link href="/project/Blog" onClick={() => router.push('/project/Blog')}>
+                                    View Project
                                 <Image 
                                 src="/assets/arrow-right.svg" 
                                 alt="arrow right" 
                                 width={20}
                                 height={20}
-                                className="invert brightness-0 ml-2"
+                                className="invert brightness-0 ml-1"
                                 />
-                                </Link>
+                                </Link> 
                             </div>
                       </div>
                         
