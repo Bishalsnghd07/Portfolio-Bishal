@@ -45,20 +45,29 @@ export const NavLinks = [
       icon: RxDashboard,
       link: "/project",
     },
+    // {
+    //   name: "Projects",
+    //   icon: RxDashboard,
+    //   link: "/project/1",
+    // },
   ];
 
   export const ProImages = [
     {
       src: "/space/RenewalsTransactions.png",
+      link:"/project/[projectId]"
     },
     {
       src: "/space/Skills.png",
+      link:"/project/[projectId]"
     },
     {
       src: "/space/RenewalsGraph.png",
+      link:"/project/[projectId]"
     },
     {
       src: "/space/VideoStreaming.jpeg",
+      link:"/project/[projectId]"
     },
   ];
   

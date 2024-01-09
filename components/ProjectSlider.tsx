@@ -11,6 +11,7 @@ import { ProImages, ProImages2 } from "@/constants";
 import Image from "next/image";
 
 import React from 'react'
+import Link from "next/link";
 
 const ProjectSlider = () => {
   return (
@@ -45,7 +46,7 @@ const ProjectSlider = () => {
                        
                         <div className="cursor-pointer absolute inset-0 bg-gradient-to-r from-purple-800 via-pink-500 to-purple-800 opacity-0 group-hover:opacity-70 transition-opacity duration-200" />
                             <div className="cursor-pointer absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white">
-                                View Project
+                       <Link href='/Blog'> View Project
                                 <Image 
                                 src="/assets/arrow-right.svg" 
                                 alt="arrow right" 
@@ -53,8 +54,10 @@ const ProjectSlider = () => {
                                 height={20}
                                 className="invert brightness-0 ml-2"
                                 />
+                                </Link>
                             </div>
                       </div>
+                        
                     ))}
                 </div>
             </SwiperSlide>

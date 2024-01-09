@@ -7,15 +7,32 @@ export default function Home() {
       <div className="absolute z-[2] right-0 top-0 h-full w-full">
         <Particle />
       </div>
-      <div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-52 z-[10]">
+      
+      <div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[482px] rounded-md">
+  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right w-[529px] h-[472px]">
+    <div className="flex items-center justify-center w-[549px] h-[492px]">
+      <Image
+        src="/BishalSinghDeo1.png"
+        alt="BishalSinghDeo"
+        width={529}
+        height={462}
+        // className="w-[220px] h-[220px] lg:w-[300px] lg:h-[300px] xl:h-[350px] xl:w-[370px] bg-bottom rounded-md"
+        className="relative w-[529px] h-[482px] object-contain rounded-full overflow-hidden"
+      />
+    </div>
+  </div>
+</div>
+
+
+      {/* <div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[462px] bg-[url('/assets/shape-1.svg')] bg-no-repeat">
         <Image
-          src="/BishalSinghDeo.png"
+          src="/BishalSinghDeo1.png"
           alt="BishalSinghDeo"
-          width={560}
+          width={260}
           height={260}
-          className="w-[220px] h-[220px] z-[1] lg:w-[300px] lg:h-[300px] xl:h-[400px] xl:w-[400px] rounded-full  border-[6px] border-orange-600 hover:bg-yellow-900"
+          className=" w-[220px] h-[220px] z-[1] lg:w-[300px] lg:h-[300px] xl:h-[400px] xl:w-[400px] rounded-md items-center"
         />
-      </div>
+      </div> */}
       <Image
         src="/top-left-img.png"
         alt="paint"
