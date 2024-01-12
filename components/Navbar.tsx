@@ -16,7 +16,7 @@ export default function Navbar ()
 
     const handleSocialClick = (link: string) => {
       // Redirect to the specified link
-      window.location.href = link;
+      window.open(link);
     };
 
   return (
@@ -54,18 +54,14 @@ export default function Navbar ()
       <div className="flex flex-row gap-5 pr-8 lg:pr-0">
         {/* <Link href={''}></Link> */}
         {Socials.map((social) => (
-          // <a key={social.link} href={social.link} >
           
             <Image
-              // key={social.link}
               key={social.name}
               src={social.src}
               alt={social.name}
-              // link={social.link}
-              width={28}
-              height={28}
+              width={24}
+              height={24}
               onClick={() => handleSocialClick(social.link)}
-              // className='w-[4rem] h-[4rem]'
             />
 
           // </a>
