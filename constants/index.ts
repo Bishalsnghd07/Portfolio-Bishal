@@ -16,19 +16,19 @@ import {
 
 export const Socials = [
     {
-        name:"Linkedin",
+        name:"Discord Logo",
         src: "/discord.svg",
-        link: "https://discord.com/channels/@me"
+        link: "https://discord.com/users/bishalsinghdeo"
     },
     {
         name:"GithubLogo",
-        src: "/facebook.svg",
-        link: "https://facebook.com"
+        src: "/github.svg",
+        link: "https://github.com/Bishalsnghd07"
     },
     {
-        name:"DiscordLogo",
-        src: "/instagram.svg",
-        link: "https://instagram.com"
+        name:"LinkedIn Logo",
+        src: "/linkedin.svg",
+        link: "https://www.linkedin.com/in/bishal-singh-deo/"
     }
 ]
 
