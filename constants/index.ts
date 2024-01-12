@@ -18,14 +18,17 @@ export const Socials = [
     {
         name:"Linkedin",
         src: "/discord.svg",
+        link: "https://discord.com/channels/@me"
     },
     {
         name:"GithubLogo",
         src: "/facebook.svg",
+        link: "https://facebook.com"
     },
     {
         name:"DiscordLogo",
         src: "/instagram.svg",
+        link: "https://instagram.com"
     }
 ]
 

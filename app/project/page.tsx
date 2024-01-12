@@ -22,7 +22,7 @@ const Project = () => {
         <h1 className="text-[50px] text-orange-600 max-w-[500px]">My Projects
          <span className="text-orange-600">.</span>
         </h1>
-        <p className='max-w-[500px] font-semibold text-gray-400 text-[16px]'>I mentioned my live projects which I worked on during my job and Internship. Also, added hands-on projects here. You can check it out in this card, just click on it{' '}
+        <p className='max-w-[500px] font-semibold text-gray-400 text-[16px]'>I mentioned my live projects which I worked on during my job and Internship. Also, added hands-on projects here. You can check out in this card, just click on it{' '}
         {isSmallScreen ? '👇': '👉'}</p>
       </div>
       <ProjectSlider />

@@ -13,8 +13,14 @@ export default function Navbar ()
   const [input, setInput] = useState('');
     const [toggle, setToggle] = useState(false);
 
+
+    const handleSocialClick = (link: string) => {
+      // Redirect to the specified link
+      window.location.href = link;
+    };
+
   return (
-    <div className="fixed top-0 bg-transparent z-[20] flex md:px-60 w-full gap-5 justify-between p-5 cursor-pointer">
+    <div className="fixed top-0 bg-transparent z-[20] flex lg:px-60 w-full gap-5 justify-between p-5 cursor-pointer">
        <Link href="/">
       <h1 className="text-white text-[45px]">
         Bishal <span className='font-thin text-yellow-600'>Singh </span>
@@ -24,7 +30,7 @@ export default function Navbar ()
     </Link>
       {/* <Image className="pointer" src={search} alt="search_icon" width={17} height={17} /> */}
 
-      <Transition
+      {/* <Transition
               show={toggle}
               enter="transition-all duration-1000"
               enterFrom="-translate-x-full opacity-0"
@@ -44,16 +50,25 @@ export default function Navbar ()
                   }}
                 />
               </div>
-            </Transition>
-      <div className="flex flex-row gap-5 pr-8 sm:pr-0">
+            </Transition> */}
+      <div className="flex flex-row gap-5 pr-8 lg:pr-0">
+        {/* <Link href={''}></Link> */}
         {Socials.map((social) => (
-          <Image
-            key={social.name}
-            src={social.src}
-            alt={social.name}
-            width={24}
-            height={24}
-          />
+          // <a key={social.link} href={social.link} >
+          
+            <Image
+              // key={social.link}
+              key={social.name}
+              src={social.src}
+              alt={social.name}
+              // link={social.link}
+              width={28}
+              height={28}
+              onClick={() => handleSocialClick(social.link)}
+              // className='w-[4rem] h-[4rem]'
+            />
+
+          // </a>
         ))}
       </div>
       {/* <div className="flex flex-row items-center justify-center gap-5 bg-grey pr-8">
