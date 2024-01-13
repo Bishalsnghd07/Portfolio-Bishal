@@ -59,8 +59,8 @@ export default function Navbar ()
               key={social.name}
               src={social.src}
               alt={social.name}
-              width={24}
-              height={24}
+              width={28}
+              height={28}
               onClick={() => handleSocialClick(social.link)}
             />
 

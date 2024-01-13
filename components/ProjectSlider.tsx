@@ -34,7 +34,7 @@ const ProjectSlider = () => {
             <SwiperSlide className="mb-14">
                 <div className="grid grid-cols-2 gap-4 md:px-16">
                     {ProImages.map((image, index) =>(
-                      <div className="relative group w-[150px] h-[150px] lg:w-[230px] lg:h-[230px]" 
+                        <div className="relative group w-[150px] h-[150px] lg:w-[230px] lg:h-[230px]" 
                       key={image.src}
                       >
                         <Image 
@@ -46,8 +46,8 @@ const ProjectSlider = () => {
                         className="object-cover h-full w-full rounded-md" 
                         />
 
-                        <Link href={`/project/Blog/${index + 1}`} passHref>   
                         {/* <Link href="/project/Blog/[slug]" as="/project/Blog/page"> */}
+                        <Link href={`/project/Blog/${index + 1}`} passHref>   
                         <div className="cursor-pointer absolute inset-0 bg-gradient-to-r from-purple-800 via-pink-500 to-purple-800 opacity-0 group-hover:opacity-70 transition-opacity duration-200" />
                             <div className="cursor-pointer absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white">
                                 {/* <button type="button" onClick={() => router.push('/project/Blog')}> */}

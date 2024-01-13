@@ -14,6 +14,18 @@ import {
     } 
     from "react-icons/rx";
 
+
+    // constants.ts
+export type ProjectDetailsType = {
+  id: number;
+  src: string;
+  link: string;
+  details?: string;
+  additionalInfo?: string;
+  // img: string;
+};
+
+
 export const Socials = [
     {
         name:"Discord Logo",
@@ -55,22 +67,38 @@ export const NavLinks = [
     // },
   ];
 
-  export const ProImages = [
+  export const ProImages: ProjectDetailsType[] = [
     {
+      id: 1,
       src: "/space/RenewalsTransactions.png",
-      link:"/project/[projectId]"
+      link:"/project/[projectId]",
+      details:"Hello",
+      additionalInfo: "This is additional information for the first project.",
+      // img: "/space/RenewalsTransactions.png",
     },
     {
+      id: 2,
       src: "/space/Skills.png",
-      link:"/project/[projectId]"
+      link:"/project/[projectId]",
+      details:"Hello",
+      additionalInfo: "This is additional information for the 2nd project.",
+      // img: `/static/images/insight/img_1.svg`,
     },
     {
+      id: 3,
       src: "/space/RenewalsGraph.png",
-      link:"/project/[projectId]"
+      link:"/project/[projectId]",
+      details:"Hello",
+      additionalInfo: "This is additional information for the 3rd project.",
+      // img: `/static/images/insight/img_1.svg`,
     },
     {
+      id: 4,
       src: "/space/VideoStreaming.jpeg",
-      link:"/project/[projectId]"
+      link:"/project/[projectId]",
+      details:"Hello",
+      additionalInfo: "This is additional information for the 4th project.",
+      // img: `/static/images/insight/img_1.svg`,
     },
   ];
   
