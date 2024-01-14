@@ -23,20 +23,20 @@ const Slug = ({ params }: { params: { projectId: string } }) => {
 
   // Display the details on the page
   return (
-    <div className="flex justify-center items-center h-screen bg-cover bg-[#0C011A]">
-      <div className="flex flex-col">
-        <div className="flex w-full h-full">
+    <div className="flex justify-center items-center h-full w-full bg-cover bg-[#0C011A] p-6">
+      <div className="flex flex-col justify-center items-center gap-2 pt-[16rem] md:pt-[8rem]">
+        <div className="flex w-[20rem] h-[16rem] md:w-[48rem] md:h-[28rem]">
         {Slug && <img src={Slug.src} alt="Project Image" /> }
         </div>
-      <h1 className="flex text-white text-[3rem]">
+      <h1 className="flex text-white text-[3rem] gap-2">
         {/* Display the 'details' property of the project */}
         {Slug?.details}
         
-        {/* Display the 'additionalInfo' property of the project inside a paragraph */}
-        <p> {Slug?.additionalInfo}</p>
+        {/* Display the 'additionalInfo' property of the project inside a8 paragraph */}
         
         {/* Display other project details as needed */}
       </h1>
+         <p className="flex text-white text-[1.5rem]"> {Slug?.additionalInfo}</p>
       </div>
       
       {/* You can include additional components to display more project details */}

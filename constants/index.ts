@@ -81,7 +81,7 @@ export const NavLinks = [
       src: "/space/Skills.png",
       link:"/project/[projectId]",
       details:"Hello",
-      additionalInfo: "This is additional information for the 2nd project.",
+      additionalInfo: "This is additional information for the 2nd project. This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.This is additional information for the 2nd project.",
       // img: `/static/images/insight/img_1.svg`,
     },
     {
