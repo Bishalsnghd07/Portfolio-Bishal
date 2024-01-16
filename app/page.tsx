@@ -19,7 +19,7 @@ export default function Home() {
         <Particle />
       </div>    
       {isSmallScreen ? (
-        <div className="absolute items-center justify-center right-10 md:right-40 bottom-0 z-[10]">
+        <div className="absolute items-center justify-center right-20 left-20 md:right-40 bottom-0 z-[10]">
           <Image
             src="/BishalSinghDeo1.png"
             alt="BishalSinghDeo"
