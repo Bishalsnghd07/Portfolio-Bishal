@@ -14,3 +14,8 @@
 .slow-spin {
   animation: rotation 5s linear infinite;
 }
+
+.custom-rotation {
+  transform: perspective(1000px) rotateY(-20deg);
+}
+
