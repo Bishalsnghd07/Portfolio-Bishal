@@ -1,15 +1,36 @@
+'use client'
 import Particle from '@/components/Particle'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [isSmallScreen, setIsSmallSCreen] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallSCreen(window.innerWidth < 768);
+    };
+    handleResize();
+  }, [])
+  
   return (
     <main className="flex items-center min-h-screen relative bg-cover bg-[url('/assets/bg-explosion.png')]">
       <div className="absolute z-[2] right-0 top-0 h-full w-full">
         <Particle />
+      </div>    
+      {isSmallScreen ? (
+        <div className="absolute items-center justify-center right-10 md:right-40 bottom-0 z-[10]">
+          <Image
+            src="/BishalSinghDeo1.png"
+            alt="BishalSinghDeo"
+            width={560}
+            height={560}
+            className="w-[220px] h-[220px] z-[1] md:h-[560px] md:w-[560px]"
+          />
       </div>
-      
+      ) : (
       <div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[482px] rounded-md">
-  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[529px] xl:h-[472px] hidden 2xl:block">
+  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[529px] lg:h-[472px] hidden xl:block">
     <div className="flex items-center justify-center w-[220px] h-[220px] xl:w-[549px] xl:h-[492px]">
       <Image
         src="/BishalSinghDeo1.png"
@@ -22,6 +43,8 @@ export default function Home() {
     </div>
   </div>
 </div>
+      )
+      }
       <Image
         src="/top-left-img.png"
         alt="paint"
