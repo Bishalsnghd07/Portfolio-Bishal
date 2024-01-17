@@ -28,11 +28,11 @@ const Slug = ({ params }: { params: { projectId: string } }) => {
         <div className="flex justify-center items-center h-[100%] w-[100%]">
         {Slug && <img src={Slug.src} alt="Project Image"  className="max-w-full max-h-full md:max-w-[80%] lg:max-w-[60%] xl:max-w-[40%] custom-rotation" /> }
         </div>
-      <h1 className=" text-white text-[5.4vh] pt-2">
+      <h1 className=" text-white text-[8vw] md:text-[5.4vh] pt-2">
       {/* text-[50px] */}
         {Slug?.details}     
       </h1>
-         <span className=" text-white text-[3.6vh]">
+         <span className=" text-white  text-[5.5vw] md:text-[3.6vh]">
          {/* text-[3.6vh] */}
          {/* text-[26px] */}
           {Slug?.additionalInfo}</span>
