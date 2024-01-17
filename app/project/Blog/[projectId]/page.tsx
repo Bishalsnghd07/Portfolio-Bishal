@@ -24,15 +24,16 @@ const Slug = ({ params }: { params: { projectId: string } }) => {
   // Display the details on the page
   return (
     <div className="flex items-center min-h-screen bg-cover bg-[#0C011A]">
-      <div className="flex flex-wrap justify-center items-center gap-4 pt-[16rem] md:pt-[10rem] p-6 overflow-hidden">
+      <div className="flex flex-wrap justify-center items-center gap-4 pt-[16rem] md:pt-[10rem] p-7 overflow-hidden">
         <div className="flex justify-center items-center h-[100%] w-[100%]">
         {Slug && <img src={Slug.src} alt="Project Image"  className="max-w-full max-h-full md:max-w-[80%] lg:max-w-[60%] xl:max-w-[40%] custom-rotation" /> }
         </div>
-      <h1 className=" text-white text-[3.3rem]">
+      <h1 className=" text-white text-[5.4vh] pt-2">
       {/* text-[50px] */}
         {Slug?.details}     
       </h1>
-         <span className=" text-white text-[1.6rem]">
+         <span className=" text-white text-[3.6vh]">
+         {/* text-[3.6vh] */}
          {/* text-[26px] */}
           {Slug?.additionalInfo}</span>
       </div>
