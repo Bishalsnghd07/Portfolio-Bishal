@@ -17,7 +17,7 @@ import Link from "next/link";
 const ProjectSlider = () => {
     // const router = useRouter()
   return (
-    <div className="w-[85%] md:w-[40%]">
+    <div className="w-[90%] md:w-[40%]">
         <Swiper 
         breakpoints={{
             700: {
@@ -31,7 +31,7 @@ const ProjectSlider = () => {
         }}
         modules={[FreeMode,Pagination]}
         >
-            <SwiperSlide className="mb-14">
+            <SwiperSlide className="mb-14 pr-4">
                 <div className="grid grid-cols-2 gap-4 md:px-16">
                     {ProImages.map((image, index) =>(
                         <div className="relative group w-[150px] h-[150px] lg:w-[230px] lg:h-[230px]" 
@@ -67,8 +67,9 @@ const ProjectSlider = () => {
                     ))}
                 </div>
             </SwiperSlide>
-            <SwiperSlide className="mb-14">
-                <div className="grid grid-cols-2 gap-4 md:px-16 pl-2 md:pl-0">
+
+            <SwiperSlide className="mb-14 pl-2">
+                <div className="grid grid-cols-2 gap-4 md:px-16 ">
                     {ProImages2.map((image, index) =>(
                         <div className="relative group w-[150px] h-[150px] md:w-[230px] md:h-[230px]" key={image.src}>
                         <Image 
