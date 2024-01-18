@@ -12,6 +12,10 @@ export default function Home() {
     };
     handleResize();
   }, [])
+
+  document.addEventListener ("contextmenu", function(e) {
+    e.preventDefault()
+  }, false)
   
   return (
     <main className="flex items-center  h-[100vh] w-[100vw] relative bg-cover bg-[url('/assets/bg-explosion.png')]">
