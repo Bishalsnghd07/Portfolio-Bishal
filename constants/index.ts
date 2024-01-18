@@ -97,23 +97,33 @@ export const NavLinks = [
       src: "/space/VideoStreaming.jpeg",
       link:"/project/[projectId]",
       details:"Video Streaming Web App",
-      additionalInfo: "This video streeaming web app I learnt from youtube and imply it. The tech which I used: React.js, Tailwind CSS, JavaScript XML, HTML5,JQuery, animation and loader. In this project I learnt, routing, mapping, navigation, structural behaviour of react and Responsiveness.",
+      additionalInfo: "This video streaming web app I learnt from youtube and imply it. The tech which I used: React.js, Tailwind CSS, JavaScript XML, HTML5,JQuery, animation and loader. In this project I learnt, routing, mapping, navigation, structural behaviour of react and Responsiveness.",
       // img: `/static/images/insight/img_1.svg`,
     },
   ];
   
-  export const ProImages2 = [
+  export const ProImages2: ProjectDetailsType[] = [
     {
+      id: 1,
       src: "/projects/E-Commerce.png",
+      link:"/project/[projectId]",
+      details:"Renewals UI",
+      additionalInfo: "This page has been created during my job. It contains all the information about client who buy our product or renew our product. We collect history of all the data's.",
     },
     {
+      id: 2,
       src: "/projects/Stack-overflow.png",
+      link:"/project/[projectId]",
     },
     {
+      id: 3,
       src: "/projects/Car-Rental.png",
+      link:"/project/[projectId]",
     },
     {
+      id: 4,
       src: "/projects/Myntra.png",
+      link:"/project/[projectId]",
     },
   ];
   

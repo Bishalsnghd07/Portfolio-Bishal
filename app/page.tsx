@@ -14,8 +14,8 @@ export default function Home() {
   }, [])
   
   return (
-    <main className="flex items-center min-h-screen relative bg-cover bg-[url('/assets/bg-explosion.png')]">
-      <div className="absolute z-[2] right-0 top-0 h-full w-full">
+    <main className="flex items-center  h-[100vh] w-[100vw] relative bg-cover bg-[url('/assets/bg-explosion.png')]">
+      <div className="absolute z-[2] right-0 top-0 h-[100vh] w-[100vw]">
         <Particle />
       </div>    
       {isSmallScreen ? (
@@ -25,7 +25,7 @@ export default function Home() {
             alt="BishalSinghDeo"
             width={190}
             height={190}
-            className="w-[190px] h-[190px] rounded-full border-4 border-amber-600 border-dashed"
+            className="w-[190px] h-[190px] rounded-full border-4 border-amber-700"
           />
       </div>
       ) : (

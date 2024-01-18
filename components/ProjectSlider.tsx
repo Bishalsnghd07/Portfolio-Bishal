@@ -68,9 +68,9 @@ const ProjectSlider = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide className="mb-14">
-                <div className="grid grid-cols-2 gap-4 md:px-16">
-                    {ProImages2.map((image) =>(
-                      <div className="relative group w-[150px] h-[150px] md:w-[230px] md:h-[230px]" key={image.src}>
+                <div className="grid grid-cols-2 gap-4 md:px-16 pl-2 md:pl-0">
+                    {ProImages2.map((image, index) =>(
+                        <div className="relative group w-[150px] h-[150px] md:w-[230px] md:h-[230px]" key={image.src}>
                         <Image 
                         src={image.src} 
                         alt= "project image"
@@ -78,6 +78,7 @@ const ProjectSlider = () => {
                         height={280}
                         className="object-cover h-full w-full rounded-md" 
                         />
+                          <Link href={`/project/Blog/${index + 1}`} passHref>
                         <div className="cursor-pointer absolute inset-0 bg-gradient-to-r from-purple-800 via-pink-500 to-purple-800 opacity-0 group-hover:opacity-70 transition-opacity duration-200" />
                             <div className="cursor-pointer absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white">
                                 View Project
@@ -89,6 +90,7 @@ const ProjectSlider = () => {
                                 className="invert brightness-0 ml-2"
                                 />
                             </div>
+                        </Link>
                       </div>
                     ))}
                 </div>

@@ -3,7 +3,7 @@
 import ProjectSlider from '@/components/ProjectSlider'
 import React, { useEffect, useState } from 'react'
 
-const Project = () => {
+const Pages = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Pages

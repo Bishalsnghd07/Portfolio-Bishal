@@ -1,3 +1,4 @@
+'use client';
 export default function Blog() {
   return <div className="flex justify-center items-center h-screen bg-cover bg-[#0C011A]">
     
