@@ -22,10 +22,11 @@ export default function Navbar ()
   return (
     <div className="fixed top-0 bg-transparent z-[20] flex lg:px-60 w-full gap-5 justify-between p-5 cursor-pointer">
        <Link href="/">
-      <h1 className="text-white text-[45px]">
+      <h1 className="relative text-white text-[45px] group">
         Bishal <span className='font-thin text-yellow-600'>Singh </span>
         <span className="text-blue-500">Deo</span>
         <span className='text-red-600'>.</span>
+        <span className="absolute hidden md:block left-0 bottom-0 h-1 w-0 bg-gradient-to-r from-orange-500 via-white to-green-500 transition-all ease-in-out duration-500 group-hover:w-full"></span>
       </h1>
     </Link>
       {/* <Image className="pointer" src={search} alt="search_icon" width={17} height={17} /> */}
