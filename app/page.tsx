@@ -2,42 +2,61 @@
 import Particle from '@/components/Particle'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
 
 export default function Home() {
   const [isSmallScreen, setIsSmallSCreen] = useState(false)
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsSmallSCreen(window.innerWidth < 768);
     };
     handleResize();
   }, [])
-
-  // Check if running in the browser environment
-if (typeof document !== 'undefined') {
-  // Your code that uses document goes here
-  document.addEventListener("contextmenu", function(e) {
+  
+  const textVariants = {
+    initial: {
+      x:-500,
+      opacity: 0,
+    },
+    animate: {
+      x:0,
+      opacity: 1,
+      transition:{
+        duration:1,
+        delay:0.8,
+        staggerChildren:0.1,
+      }
+    },
+  }
+  
+  if (typeof document !== 'undefined') {
+    document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
-  }, false);
-}
+    }, false);
+  }
   
   return (
     <main className="flex items-center  h-[100vh] w-[100vw] relative bg-cover bg-[url('/assets/bg-explosion.png')]">
       <div className="absolute z-[2] right-0 top-0 h-[100vh] w-[100vw]">
         <Particle />
       </div>    
+
       {isSmallScreen ? (
-        <div className="absolute items-center justify-center right-20 left-20 md:right-40 bottom-0 z-[10] w-[200px]">
+        <motion.div className="absolute items-center justify-center right-20 left-20 md:right-40 bottom-0 z-[10] w-[200px]" variants={textVariants} initial="initial"
+        animate="animate">
           <Image
             src="/BishalSinghDeo2.png"
             alt="BishalSinghDeo"
             width={190}
             height={190}
             className="w-[190px] h-[190px] rounded-full border-4 border-amber-700"
-          />
-      </div>
+            />
+      </motion.div>
       ) : (
-      <div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[482px] rounded-md">
+        <motion.div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[482px] rounded-md" variants={textVariants} initial="initial"
+        animate="animate">
   <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[529px] lg:h-[472px] hidden xl:block">
     <div className="flex items-center justify-center w-[220px] h-[220px] xl:w-[549px] xl:h-[492px]">
       <Image
@@ -50,22 +69,23 @@ if (typeof document !== 'undefined') {
         />
     </div>
   </div>
-</div>
+</motion.div>
       )
-      }
+    }
       <Image
         src="/top-left-img.png"
         alt="paint"
         width={230}
         height={230}
         className="absolute left-0 top-0"
-      />
+        />
 
-      <div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40 pt-56 lg:pt-28">
-        <h1 className="text-[50px] text-white max-w-[550px]"> Frontend{" "}
-         <span className="text-red-600">Developer👋</span>
-         <p className='text-white text-lg'>Hi, I am Bishal, passionate frontend developer experience in creating Web application, Mobile application, API Integration and Software development. Check out my projects and skills.</p>
-        </h1>
+      <motion.div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40 pt-56 lg:pt-28" variants={textVariants} initial="initial"
+      animate="animate">
+        <motion.h1 className="text-[50px] text-white max-w-[550px]" variants={textVariants}> Frontend{" "}
+         <motion.span className="text-red-600" variants={textVariants}>Developer👋</motion.span>
+         <motion.p className='text-white text-lg' variants={textVariants}>Hi, I am Bishal, passionate frontend developer experience in creating Web application, Mobile application, API Integration and Software development. Check out my projects and skills.</motion.p>
+        </motion.h1>
         <div className="relative w-[100px] h-[100px] md:w-[160px] md:h-[160px] mt-5">
           <Image
             src="/assets/rounded-text.png"
@@ -73,9 +93,9 @@ if (typeof document !== 'undefined') {
             width={160}
             height={160}
             className="slow-spin hidden md:block"
-          />
+            />
         </div>
-      </div>
+      </motion.div>
       
     </main>
   )
