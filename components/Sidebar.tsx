@@ -31,30 +31,13 @@ const Sidebar = () => {
         return () => clearTimeout(timeout)
        }
      },[isRouting, path])
-
-     const textVariants = {
-      initial: {
-        x:-500,
-        opacity: 0,
-      },
-      animate: {
-        x:0,
-        opacity: 1,
-        transition:{
-          duration:1,
-          delay:0.8,
-          staggerChildren:0.1,
-        }
-      },
-    }
      
 
   return (
     <div className='fixed right-8 top-[18rem] h-[12.5rem] w-[3rem] z-[20] rounded-full bg-gray-500 bg-opacity-50'>
         <AnimatePresence mode="wait">
           {isRouting && <Transition />}
-        <motion.div className="flex flex-col gap-5 pb-3 justify-center items-center h-full"  variants={textVariants} initial="initial"
-        animate="animate">
+        <div className="flex flex-col gap-5 pb-3 justify-center items-center h-full">
             {NavLinks.map((link) => (
                 <Link 
                 key={link.name}
@@ -68,7 +51,7 @@ const Sidebar = () => {
               />
                 </Link>
             ))}
-        </motion.div>
+        </div>
         </AnimatePresence>
     </div>
   )
