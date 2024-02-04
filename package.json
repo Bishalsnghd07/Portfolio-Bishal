@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@tsparticles/engine": "^3.0.3",
     "@tsparticles/react": "^3.0.0",
     "framer-motion": "^10.16.4",

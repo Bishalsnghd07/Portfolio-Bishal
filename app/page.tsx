@@ -31,19 +31,19 @@ export default function Home() {
     },
   }
   
-  if (typeof document !== 'undefined') {
-    document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-    }, false);
-  }
+  // if (typeof document !== 'undefined') {
+  //   document.addEventListener("contextmenu", function(e) {
+  //   e.preventDefault();
+  //   }, false);
+  // }
   
   return (
-    <main className="flex items-center  h-[100vh] w-[100vw] relative bg-cover bg-[url('/assets/bg-explosion.png')]">
+    <main className="flex items-center min-h-screen relative bg-cover bg-[url('/assets/bg-explosion.png')]">
       <div className="absolute z-[2] right-0 top-0 h-[100vh] w-[100vw]">
         <Particle />
       </div>    
 
-      {isSmallScreen ? (
+      {/* {isSmallScreen ? (
         <motion.div className="absolute items-center justify-center right-20 left-20 md:right-40 bottom-0 z-[10] w-[200px]" variants={textVariants} initial="initial"
         animate="animate">
           <Image
@@ -55,23 +55,23 @@ export default function Home() {
             />
       </motion.div>
       ) : (
-        <motion.div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] w-[240px] h-[240px] xl:w-[529px] xl:h-[482px] rounded-md" variants={textVariants} initial="initial"
+        <motion.div className="absolute bottom-0 lg:bottom-auto right-[4.3rem] md:right-[5.4rem] lg:right-[7.4rem] xl:right-[16rem] z-[10] xl:pl-[8rem]   rounded-md" variants={textVariants} initial="initial"
         animate="animate">
-  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[529px] lg:h-[472px] hidden xl:block">
-    <div className="flex items-center justify-center w-[220px] h-[220px] xl:w-[549px] xl:h-[492px]">
+  <div className="bg-[url('/assets/shape-1.svg')] bg-no-repeat bg-right xl:w-[32rem] xl:h-[28.5rem] hidden xl:block">
+    <div className="flex items-center justify-center">
       <Image
         src="/BishalSinghDeo1.png"
         alt="BishalSinghDeo"
         width={529}
         height={462}
         // className="w-[220px] h-[220px] lg:w-[300px] lg:h-[300px] xl:h-[350px] xl:w-[370px] bg-bottom rounded-md"
-        className="flex w-[260px] h-[260px] xl:w-[509px] xl:h-[484px] rounded-none lg:rounded-full overflow-hidden"
+        className="flex w-[260px] h-[260px] xl:w-[20rem] xl:h-[20rem] rounded-none lg:rounded-full overflow-hidden"
         />
     </div>
   </div>
 </motion.div>
       )
-    }
+    } */}
       <Image
         src="/top-left-img.png"
         alt="paint"
@@ -82,11 +82,11 @@ export default function Home() {
 
       <motion.div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40 pt-56 lg:pt-28" variants={textVariants} initial="initial"
       animate="animate">
-        <motion.h1 className="text-[50px] text-white max-w-[550px]" variants={textVariants}> Frontend{" "}
+        <motion.h1 className="text-[3rem] text-white max-w-[28.35rem]" variants={textVariants}> Frontend{" "}
          <motion.span className="text-red-600" variants={textVariants}>Developer👋</motion.span>
          <motion.p className='text-white text-lg' variants={textVariants}>Hi, I am Bishal, passionate frontend developer experience in creating Web application, Mobile application, API Integration and Software development. Check out my projects and skills.</motion.p>
         </motion.h1>
-        <div className="relative w-[100px] h-[100px] md:w-[160px] md:h-[160px] mt-5">
+        <div className="relative w-[100px] h-[100px] md:w-[120px] md:h-[120px] mt-5">
           <Image
             src="/assets/rounded-text.png"
             alt="projects"
