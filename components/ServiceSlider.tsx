@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const ServiceSlider = () => {
   return (
-    <div className="absolute -bottom-6 right-20 lg:bottom-40 lg:right-30 w-[60%] lg:w-[55%]">
+    <div className="absolute -bottom-6 right-20 lg:top-56 lg:bottom-32 lg:right-28 w-[60%] lg:w-[48%]">
       <Swiper
         breakpoints={{
           340: {
@@ -31,7 +31,7 @@ const ServiceSlider = () => {
       >
         {ServiceData.map((item) => (
           <SwiperSlide key={item.title}>
-            <div className="rounded-md cursor-pointer flex flex-col gap-6 mb-10 group relative text-white shadow-lg rounde-xl px-6 py-8  h-[260px] w-[200px] lg:h-[300px] lg:w-[250px] overflow-hidden">
+            <div className="rounded-md cursor-pointer flex flex-col mb-8 group relative text-white shadow-lg rounde-xl px-6 py-8 h-[260px] w-[200px] lg:h-[17.75rem] lg:w-[100%] overflow-hidden">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
@@ -40,7 +40,7 @@ const ServiceSlider = () => {
               <div className="relative flex flex-col gap-3">
                 <item.icon className="text-blue-600  group-hover:text-blue-400 w-[32px] h-[32px]" />
                 <h1 className="text-xl lg:text-2xl">{item.title}</h1>
-                <p className="lg:text-[18px]">{item.content}</p>
+                <p className="lg:text-[1.125rem]">{item.content}</p>
               </div>
             </div>
           </SwiperSlide>
