@@ -27,11 +27,11 @@ const Page = () => {
   
   return (
     <div className="flex min-h-screen bg-cover bg-[#ddb02a]">
-      <div className="flex flex-col gap-3 z-[10] pl-5 md:pl-40">
+      <div className="flex flex-col gap-3 pl-5 md:pl-40">
         <h1 className="text-[3.125rem] text-blue-600 max-w-[31.25rem] pt-[13.4rem] lg:pt-[15rem]">My Skills
          <span className="text-blue-600">.</span>
         </h1>
-        <p className='max-w-[24.40rem] font-sans text-white text-[1.125rem] pb-[8.125rem] md:pb-0'>
+        <p className='max-w-[24.40rem] font-sans text-white text-[1.125rem] md:pb-0'>
       I mentioned my all skills from the beginning of my journey. Here, I show my skills, which I&rsquo;ve focused on. You can check them out in this card{' '}
       {isSmallScreen ? '👇' : '👉'}
     </p>
