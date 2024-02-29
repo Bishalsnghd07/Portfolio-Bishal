@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-jakarta);
+}
+
 @keyframes rotation {
   from{
     transform: rotate(0deg);
