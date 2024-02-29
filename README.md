@@ -26,6 +26,8 @@ In addition, I ***implement background video player with z-index property, swipe
 - **TSX**📜
 - **Framer-motion**🎭
 - **JavaScript Library**📰
+- **Swiper Library**📔
+- **Ts-particle Library**🎆
 
 # 👨‍💻Author
 
