@@ -4,7 +4,7 @@
 
 ## The challenge
 
-In this challenge I built **portfolio** web app to showcase my skills and experience what I did till now.
+For this challenge I built **portfolio** web app to showcase *my skill*s and *experience*, highlighting my achievements thus far.
 
 
 Users should be able to:
