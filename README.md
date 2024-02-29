@@ -16,6 +16,16 @@ Users should be able to:
 
 In addition, I ***implement background video player with z-index property, swiper slider library, ts-particles library***.
 
+## Screenshot
+
+![Design preview for the portoflio skills page](/public/Screenshot-741.png)
+
+![Design preview for the portoflio projects page](/public/Screenshot-740.png)
+
+![Design preview for the portoflio projects1 page](/public/Screenshot-744.png)
+
+![Design preview for the portoflio projects2 page](/public/Screenshot-742.png)
+
 ## 🛠️Built with
 
 - **HTML5**📃
