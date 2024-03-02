@@ -35,7 +35,7 @@ export default function Navbar ()
     }
 
   return (
-    <div className="fixed items-center top-0 bg-transparent z-[20] flex w-full gap-[40rem] justify-center pt-5 cursor-pointer">
+    <div className="fixed top-0 bg-transparent z-[20] flex w-full gap-5 justify-between p-5 cursor-pointer">
        <Link href="/">
       <motion.h1 className="relative text-white text-[2.4rem] md:pl-[8.5rem] group"  variants={textVariants} initial="initial"
         animate="animate">
