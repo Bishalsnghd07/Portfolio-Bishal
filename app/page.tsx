@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-
 export default function Home() {
   const [isSmallScreen, setIsSmallSCreen] = useState(false)
   
@@ -37,19 +36,19 @@ export default function Home() {
   //   }, false);
   // }
   
-  {/* <Image
-    src="/top-left-img.png"
-    alt="paint"
-    width={230}
-    height={230}
-    className="absolute left-0 top-0"
-    /> */}
-
+  
   return (
-    <main className="grid min-h-screen bg-cover bg-[url('/assets/bg-explosion.png')]">
+    <main className="grid items-center justify-center min-h-screen bg-cover bg-[url('/assets/bg-explosion.png')]">
       <div className="absolute z-[2] right-0 top-0 h-[100vh] w-[100vw]">
         <Particle />
       </div>    
+      <Image
+        src="/top-left-img.png"
+        alt="paint"
+        width={230}
+        height={230}
+        className="absolute left-0 top-0"
+        />
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center'>
         <motion.div className='flex flex-col justify-center items-start leading-7 p-5 md:pl-[10rem] md:max-w-[40rem] pt-[8rem] md:pt-[1.2rem]' variants={textVariants} initial="initial" animate="animate">
@@ -74,27 +73,9 @@ export default function Home() {
           className='hover:bg-orange-400 transition duration-700 ease-in-out w-full p-6 md:max-w-[15.5rem] border-t-4 border-r-4 rounded-r-2xl shadow-2xl shadow-yellow-500 rounded-t-2xl'
           />
         </motion.div>
-        
       </div>
         
       
     </main>
   )
 }
-
-      // <motion.div className=" gap-4 z-[10] leading-[3.6rem] justify-center items-center" variants={textVariants} initial="initial"
-      // animate="animate">
-      //   <motion.h1 className="text-6xl text-white max-w-[28.35rem]" variants={textVariants}> Frontend{" "}
-      //    <motion.span className="text-red-600" variants={textVariants}>Developer👋</motion.span>
-      //    <motion.p className='text-white text-lg pt-5 leading-7' variants={textVariants}>Hi, I am Bishal, passionate frontend developer experience in creating Web application, Mobile application, API Integration and Software development. Check out my projects and skills.</motion.p>
-      //   </motion.h1>
-      //   </motion.div>
-      //   <div className=' right-[12rem] top-[8.8rem] justify-end items-end'>
-      //   <div className="relative hidden lg:block z-0 ml-10 before:absolute before:-top-14 before:-left-16 before:rounded-t-[25rem] before:w-full before:max-w-[25rem] before:h-full before:border-2 before:border-blue before:z-[-1]">
-          // <img  
-          // src="/BishalSinghDeo1.png"
-          // alt="Profile"
-          // className='hover:filter hover:saturate-200 transition duration-500 z-40 w-full max-w-[25rem] md:max-w-[20.5rem]'
-          // />
-      //   </div>
-      //   </div>
