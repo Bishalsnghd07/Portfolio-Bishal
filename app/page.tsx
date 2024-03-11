@@ -66,7 +66,7 @@ export default function Home() {
             />
         </div>
         </motion.div>
-        <motion.div className="hidden md:block z-20 pl-[2.4rem]" variants={textVariants} initial="initial" animate="animate">
+        <motion.div className="hidden md:block z-10 pl-[2.4rem]" variants={textVariants} initial="initial" animate="animate">
         <img  
           src="/BishalSinghDeo.png"
           alt="Profile"
