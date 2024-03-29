@@ -35,9 +35,10 @@ export default function Navbar ()
     }
 
   return (
-    <div className="fixed top-0 bg-transparent z-[20] flex w-full gap-5 justify-between p-5 cursor-pointer">
+    <div className="z-40 flex justify-center items-center p-4 cursor-pointer bg-[url('/assets/bg-explosion.png')]">
+      <div className='grid grid-cols-2 gap-[22rem]'>
        <Link href="/">
-      <motion.h1 className="relative text-white text-[2.4rem] md:pl-[8.5rem] group"  variants={textVariants} initial="initial"
+      <motion.h1 className="flex justify-center gap-2 text-white text-[2.4rem] group"  variants={textVariants} initial="initial"
         animate="animate">
         Bishal <span className='font-thin text-yellow-600'>Singh </span>
         <span className="text-blue-500">Deo</span>
@@ -46,7 +47,7 @@ export default function Navbar ()
       </motion.h1>
     </Link>
 
-      <motion.div className="flex flex-row gap-5 pr-8 md:pr-8"  variants={textVariants} initial="initial"
+      <motion.div className="flex flex-row justify-center gap-4"  variants={textVariants} initial="initial"
         animate="animate">
         {Socials.map((social) => (
           
@@ -60,6 +61,7 @@ export default function Navbar ()
             />
         ))}
       </motion.div>
+      </div>
      </div>
   )
 }

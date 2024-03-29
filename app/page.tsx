@@ -50,8 +50,8 @@ export default function Home() {
         className="absolute left-0 top-0"
         />
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center'>
-        <motion.div className='flex flex-col justify-center items-start leading-7 p-5 md:pl-[10rem] md:max-w-[40rem] pt-[8rem] md:pt-[1.2rem]' variants={textVariants} initial="initial" animate="animate">
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-start'>
+        <motion.div className='flex flex-col justify-start items-start leading-7 p-5 md:pl-[10rem] md:max-w-[40rem] pt-[8rem] md:pt-[0rem]' variants={textVariants} initial="initial" animate="animate">
           <h1 className='text-5xl lg:text-6xl text-white transition md:hover:translate-x-4 duration-500 cursor-pointer z-10 md:z-20'>Frontend{" "}
           <span className='text-red-600'>Developer {isSmallScreen ? '' : '👋'}</span>
           </h1>
