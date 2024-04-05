@@ -23,9 +23,10 @@ const ServiceSlider = () => {
             spaceBetween: 15,
           },
         }}
-        freeMode={true}
+        freeMode={false}
         pagination={{
           clickable: true,
+          dynamicBullets: true,
         }}
         modules={[FreeMode, Pagination]}
       >

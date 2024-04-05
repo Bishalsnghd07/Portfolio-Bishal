@@ -17,7 +17,7 @@ const Pages = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-4 justify-start min-h-screen pt-[14rem] lg:pt-0 bg-cover bg-[#0C011A]">
+    <div className="flex flex-col lg:flex-row items-center gap-4 justify-start min-h-screen pt-[14rem] lg:pt-0 bg-cover bg-[#281246]">
       <div className="flex flex-col gap-2 z-[10] pl-5 md:pl-[10rem] max-w-[600px]">
         <h1 className="text-[50px] text-orange-600">My Projects
          <span className="text-orange-600">.</span>
