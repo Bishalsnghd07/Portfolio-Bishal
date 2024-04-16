@@ -43,11 +43,11 @@ export default function Home() {
       </div>    
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center'>
-        <motion.div className='flex flex-col justify-center items-start leading-7 p-5 md:pl-[10rem] md:max-w-[40rem] pt-[8rem] md:pt-[5rem] lg:pt-[1.2rem]' variants={textVariants} initial="initial" animate="animate">
+        <motion.div className='flex flex-col justify-center items-start leading-7 p-5 md:pl-[10rem] md:max-w-[40rem] pt-[14rem] md:pt-[5rem] lg:pt-[1.2rem]' variants={textVariants} initial="initial" animate="animate">
           <h1 className='text-5xl lg:text-6xl text-white transition md:hover:translate-x-4 duration-500 cursor-pointer md:z-20'>Frontend{" "}  {isSmallScreen ? '👋' : ''}
           <span className='text-red-600'>Developer {isSmallScreen ? '' : '👋'}</span>
           </h1>
-          <p className='text-white text-base font-sans font-medium pt-5 pl-1 leading-7 transition md:hover:translate-x-3 md:hover:text-slate-300 md:hover:scale-105 duration-500 md:z-20 cursor-pointer'>Hi, I am Bishal, passionate frontend developer experience in creating Web application, Mobile application, API Integration and Software development. Check out my projects and skills.</p>
+          <p className='text-white text-base font-sans font-medium pt-8 md:pt-5 pl-1 leading-7 transition md:hover:translate-x-3 md:hover:text-slate-300 md:hover:scale-105 duration-500 md:z-20 cursor-pointer px-[3.8rem] md:px-0'>Hi, I am Bishal, passionate Full Stack developer experience in creating Web application, API Integration, E2E and Software development. And focus on betterment. Check out my projects and skills. More to come soon {"😉"}</p>
           <div className="w-[100px] h-[100px] md:w-[120px] md:h-[1rem] mt-8">
           <Image
             src="/assets/rounded-text.png"
