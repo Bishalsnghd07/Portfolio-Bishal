@@ -47,7 +47,7 @@ export default function Home() {
           <h1 className='text-5xl lg:text-6xl text-white transition md:hover:translate-x-4 duration-500 cursor-pointer md:z-20'>Full Stack{" "}  {isSmallScreen ? '👋' : ''}
           <span className='text-red-600'>Developer {isSmallScreen ? '' : '👋'}</span>
           </h1>
-          <p className='text-white text-base font-sans font-medium pt-8 md:pt-5 pl-1 leading-7 transition md:hover:translate-x-3 md:hover:text-slate-300 md:hover:scale-105 duration-500 md:z-20 cursor-pointer px-[3.8rem] md:px-0'>Hi, I am Bishal, passionate Full Stack developer experience in creating Web application, API Integration, E2E and Software development. And focus on betterment. Check out my projects and skills. More to come soon {"😉"}</p>
+          <p className='text-white text-base font-sans font-medium pt-8 md:pt-5 pl-1 leading-7 transition md:hover:translate-x-3 md:hover:text-slate-300 md:hover:scale-105 duration-500 md:z-20 cursor-pointer max-w-[16.4rem] md:max-w-none'>Hi, I am Bishal, passionate Full Stack developer experience in creating Web application, API Integration, E2E and Software development. And focus on betterment. Check out my projects and skills. More to come soon {"😉"}</p>
           <div className="w-[100px] h-[100px] md:w-[120px] md:h-[1rem] mt-8">
           <Image
             src="/assets/rounded-text.png"
