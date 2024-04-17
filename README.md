@@ -45,6 +45,6 @@ In addition, I ***implement background video player with z-index property, swipe
 
 # 👨‍💻Author
 
-- My Youtube Channel - [FrontendFineness](https://www.youtube.com/@frontendfineness985/videos)
-- Website - [Portfolio web page](https://portfolio-bishal-ts94.vercel.app/project)
-- Frontend Mentor - [@Bishalsnghd07](https://www.frontendmentor.io/profile/Bishalsnghd07)
+👉 My Youtube Channel - [FrontendFineness](https://www.youtube.com/@frontendfineness985/videos)  <br />
+👉 Website - [Portfolio web page](https://portfolio-bishal-ts94.vercel.app/project) <br />
+👉 Frontend Mentor - [@Bishalsnghd07](https://www.frontendmentor.io/profile/Bishalsnghd07)
