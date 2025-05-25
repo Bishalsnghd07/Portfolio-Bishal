@@ -89,7 +89,7 @@ export default function Home() {
           />
         </motion.div>
       </div>
-      <div>
+      <div className="z-40">
         <Chatbot />
       </div>
     </main>
