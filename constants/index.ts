@@ -176,99 +176,248 @@ export const ServiceData = [
   },
 ];
 
-export const chatbotData = [
+// export const chatbotData = [
+//   {
+//     question: "What is your company about?",
+//     options: [
+//       {
+//         option: "Tech Solutions Provider",
+//         followUp: {
+//           question: "What industries do you serve?",
+//           options: [
+//             {
+//               option: "Healthcare",
+//               followUp: {
+//                 question: "What services do you provide in Healthcare?",
+//                 options: [
+//                   { option: "AI Integration" },
+//                   { option: "Cloud Solutions" },
+//                 ],
+//               },
+//             },
+//             {
+//               option: "Education",
+//               followUp: {
+//                 question: "What services do you provide in Education?",
+//                 options: [
+//                   { option: "Web Development" },
+//                   { option: "Mobile App Development" },
+//                 ],
+//               },
+//             },
+//             {
+//               option: "Finance",
+//               followUp: {
+//                 question: "What services do you provide in Finance?",
+//                 options: [
+//                   { option: "AI Integration" },
+//                   { option: "Cloud Solutions" },
+//                   { option: "Mobile App Development" },
+//                 ],
+//               },
+//             },
+//           ],
+//         },
+//       },
+//     ],
+//   },
+//   {
+//     question: "How can I contact support?",
+//     options: [
+//       {
+//         option: "Email",
+//         followUp: {
+//           question: "Please email us at support@example.com.",
+//           options: [],
+//         },
+//       },
+//       {
+//         option: "Phone",
+//         followUp: {
+//           question: "You can call us at +1234567890.",
+//           options: [],
+//         },
+//       },
+//     ],
+//   },
+//   {
+//     question: "What are your business hours?",
+//     options: [
+//       {
+//         option: "Business Hours",
+//         followUp: {
+//           question:
+//             "Our business hours are 9 AM to 5 PM, Monday through Friday.",
+//           options: [],
+//         },
+//       },
+//     ],
+//   },
+//   {
+//     question: "Do you offer remote services?",
+//     options: [
+//       {
+//         option: "Yes",
+//         followUp: {
+//           question:
+//             "Yes, we offer remote services worldwide for all our solutions.",
+//           options: [],
+//         },
+//       },
+//       {
+//         option: "No",
+//         followUp: {
+//           question: "Currently, we only offer remote services worldwide.",
+//           options: [],
+//         },
+//       },
+//     ],
+//   },
+// ];
+
+interface FollowUpOption {
+  option: string;
+  answer?: string;
+  followUp?: FollowUpQuestion;
+}
+
+interface FollowUpQuestion {
+  question: string;
+  options: FollowUpOption[];
+}
+
+interface ChatbotDataItem {
+  question: string;
+  options: FollowUpOption[];
+}
+
+export const chatbotData: ChatbotDataItem[] = [
   {
-    question: "What is your company about?",
+    question: "What services do you offer as a Full Stack Developer?",
     options: [
       {
-        option: "Tech Solutions Provider",
+        option: "Web Development",
         followUp: {
-          question: "What industries do you serve?",
+          question: "What type of web development services do you need?",
           options: [
             {
-              option: "Healthcare",
-              followUp: {
-                question: "What services do you provide in Healthcare?",
-                options: [
-                  { option: "AI Integration" },
-                  { option: "Cloud Solutions" },
-                ],
-              },
+              option: "Frontend Development",
+              answer:
+                "I specialize in responsive, modern frontend development using React, Next.js, Tailwind CSS, and TypeScript. I can create dynamic UI/UX designs, component libraries, and optimize for performance.",
             },
             {
-              option: "Education",
-              followUp: {
-                question: "What services do you provide in Education?",
-                options: [
-                  { option: "Web Development" },
-                  { option: "Mobile App Development" },
-                ],
-              },
+              option: "Backend Development",
+              answer:
+                "I provide scalable backend solutions using Node.js, Express, RESTful or GraphQL APIs, and databases like MongoDB or PostgreSQL. Security, performance, and maintainability are key priorities.",
             },
             {
-              option: "Finance",
-              followUp: {
-                question: "What services do you provide in Finance?",
-                options: [
-                  { option: "AI Integration" },
-                  { option: "Cloud Solutions" },
-                  { option: "Mobile App Development" },
-                ],
-              },
+              option: "Full Stack Web App",
+              answer:
+                "I build end-to-end web applications using the MERN or Next.js stack, handling everything from UI design and API architecture to deployment and DevOps.",
+            },
+            {
+              option: "Landing Page / Marketing Site",
+              answer:
+                "I design fast, SEO-friendly landing pages using modern frontend tools like Next.js or plain HTML/CSS if needed, optimized for conversions and mobile responsiveness.",
             },
           ],
         },
       },
-    ],
-  },
-  {
-    question: "How can I contact support?",
-    options: [
       {
-        option: "Email",
+        option: "API Development & Integration",
         followUp: {
-          question: "Please email us at support@example.com.",
-          options: [],
+          question: "What type of API work do you need?",
+          options: [
+            {
+              option: "Build a new REST API",
+              answer:
+                "I design and implement RESTful APIs with proper versioning, documentation (Swagger/OpenAPI), and security measures (JWT, OAuth).",
+            },
+            {
+              option: "GraphQL API Development",
+              answer:
+                "I create efficient GraphQL APIs with proper type definitions, resolvers, and caching strategies using Apollo Server or GraphQL Yoga.",
+            },
+            {
+              option: "Third-party API Integration",
+              answer:
+                "I integrate with popular APIs like Stripe, Google Maps, or social media platforms, handling authentication, rate limiting, and error handling.",
+            },
+          ],
         },
       },
       {
-        option: "Phone",
+        option: "Database Design & Management",
         followUp: {
-          question: "You can call us at +1234567890.",
-          options: [],
-        },
-      },
-    ],
-  },
-  {
-    question: "What are your business hours?",
-    options: [
-      {
-        option: "Business Hours",
-        followUp: {
-          question:
-            "Our business hours are 9 AM to 5 PM, Monday through Friday.",
-          options: [],
-        },
-      },
-    ],
-  },
-  {
-    question: "Do you offer remote services?",
-    options: [
-      {
-        option: "Yes",
-        followUp: {
-          question:
-            "Yes, we offer remote services worldwide for all our solutions.",
-          options: [],
+          question: "Which type of database do you prefer?",
+          options: [
+            {
+              option: "SQL (PostgreSQL, MySQL)",
+              answer:
+                "I design normalized SQL databases with proper indexing, query optimization, and ACID compliance using PostgreSQL or MySQL.",
+            },
+            {
+              option: "NoSQL (MongoDB, Firebase)",
+              answer:
+                "I implement schema design for NoSQL databases focusing on scalability and performance, using MongoDB or Firebase Firestore.",
+            },
+            {
+              option: "Not Sure",
+              answer:
+                "I can help analyze your requirements and recommend the best database solution for your use case and scale needs.",
+            },
+          ],
         },
       },
       {
-        option: "No",
+        option: "Deployment & DevOps",
         followUp: {
-          question: "Currently, we only offer remote services worldwide.",
-          options: [],
+          question: "What environment do you want to deploy in?",
+          options: [
+            {
+              option: "AWS",
+              answer:
+                "I deploy and manage infrastructure on AWS using services like EC2, S3, Lambda, and RDS, with Terraform for infrastructure-as-code.",
+            },
+            {
+              option: "Vercel/Netlify",
+              answer:
+                "I configure and optimize deployments for frontend applications and static sites using Vercel or Netlify with CI/CD pipelines.",
+            },
+            {
+              option: "Dockerized Setup",
+              answer:
+                "I containerize applications using Docker and manage orchestration with Kubernetes or Docker Compose for development and production environments.",
+            },
+            {
+              option: "CI/CD Setup",
+              answer:
+                "I implement continuous integration and deployment pipelines using GitHub Actions, CircleCI, or Jenkins for automated testing and deployment.",
+            },
+          ],
+        },
+      },
+      {
+        option: "Maintenance & Support",
+        followUp: {
+          question: "What kind of support do you need?",
+          options: [
+            {
+              option: "Bug Fixing",
+              answer:
+                "I provide debugging and issue resolution services with detailed root cause analysis and preventive measures.",
+            },
+            {
+              option: "Feature Enhancements",
+              answer:
+                "I implement new features while maintaining code quality and backwards compatibility.",
+            },
+            {
+              option: "Ongoing Maintenance",
+              answer:
+                "I offer retainer-based maintenance packages for regular updates, security patches, and performance monitoring.",
+            },
+          ],
         },
       },
     ],

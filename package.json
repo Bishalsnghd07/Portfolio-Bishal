@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tsparticles/engine": "^3.0.3",
     "@tsparticles/react": "^3.0.0",
     "framer-motion": "^10.16.4",
+    "lucide-react": "^0.511.0",
     "next": "13.5.4",
+    "openai": "^4.103.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
