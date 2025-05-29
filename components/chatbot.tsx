@@ -151,8 +151,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
       <div className="group fixed bottom-6 right-6">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative bg-red-600 text-white px-3 py-[0.4rem] rounded-full shadow-lg 
-                 hover:bg-red-700 transition-all duration-300
+          className="relative bg-yellow-600 text-white px-3 py-[0.4rem] rounded-full shadow-lg 
+                 hover:bg-yellow-700 transition-all duration-300
                  ring-0 hover:ring-8 ring-red-100/50"
         >
           Chat 💬
@@ -189,11 +189,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
 
       {isOpen && (
         <div className="fixed bottom-20 right-6 w-[19rem] h-[24rem] bg-white rounded-xl shadow-lg border-none flex flex-col">
-          <div className="flex items-center justify-between p-3 bg-red-600 text-white rounded-t-lg">
+          <div className="flex items-center justify-between p-3 bg-yellow-600 text-white rounded-t-lg">
             {navHistory.length > 1 && (
               <button
                 onClick={handleBack}
-                className="hover:bg-red-700 p-1 rounded-md"
+                className="hover:bg-yellow-700 p-1 rounded-md"
               >
                 ←
               </button>
@@ -280,7 +280,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
             />
             <button
               onClick={() => handleSendMessage(userInput)}
-              className="ml-2 px-2 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+              className="ml-2 px-2 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700"
             >
               Send
             </button>
