@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { chatbotData } from "@/constants";
 
 interface ChatbotProps {
@@ -34,6 +34,17 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [userInput, setUserInput] = useState("");
   const [navHistory, setNavHistory] = useState<FollowUpOption[][]>([]);
+  // Add scroll ref
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Add scroll effect
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]); // Trigger when messages change
 
   const handleBack = () => {
     if (navHistory.length > 1) {
@@ -256,6 +267,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
                 </div>
               ))
             )}
+            {/* Add this empty div at the end */}
+            <div ref={messagesEndRef} />
           </div>
 
           <div className="p-3 bg-white border-t">
