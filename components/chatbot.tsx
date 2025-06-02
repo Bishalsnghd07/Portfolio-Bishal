@@ -34,6 +34,9 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [userInput, setUserInput] = useState("");
   const [navHistory, setNavHistory] = useState<FollowUpOption[][]>([]);
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef<any>(null);
+
   // Add scroll ref
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -157,6 +160,52 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
 
   const handleBackToMenu = () => setMessages([]);
 
+  // 2. Initialize speech recognition
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        recognitionRef.current = new SpeechRecognition();
+        recognitionRef.current.continuous = false;
+        recognitionRef.current.interimResults = false;
+
+        recognitionRef.current.onresult = (event: any) => {
+          const transcript = event.results[0][0].transcript;
+          setUserInput(transcript);
+          handleSendMessage(transcript);
+        };
+
+        recognitionRef.current.onerror = (event: any) => {
+          console.error("Speech recognition error", event.error);
+          setIsListening(false);
+        };
+      }
+    }
+
+    return () => {
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
+      }
+    };
+  }, []);
+
+  // 3. Add microphone toggle function
+  const toggleMicrophone = () => {
+    if (!recognitionRef.current) {
+      alert("Speech recognition not supported in your browser");
+      return;
+    }
+
+    if (isListening) {
+      recognitionRef.current.stop();
+      setIsListening(false);
+    } else {
+      recognitionRef.current.start();
+      setIsListening(true);
+    }
+  };
+
   return (
     <>
       <div className="group fixed bottom-6 right-6">
@@ -199,8 +248,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
       </div>
 
       {isOpen && (
-        <div className="fixed bottom-20 right-6 w-[19rem] h-[24rem] bg-white rounded-xl shadow-lg border-none flex flex-col">
-          <div className="flex items-center justify-between p-3 bg-yellow-600 text-white rounded-t-lg">
+        <div className="fixed bottom-20 right-6 w-[19rem] h-[25rem] bg-white rounded-xl shadow-lg border-none flex flex-col">
+          <div className="flex items-center justify-between p-3 bg-yellow-600 text-white rounded-t-lg flex-wrap">
             {navHistory.length > 1 && (
               <button
                 onClick={handleBack}
@@ -280,23 +329,86 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
             </button>
           </div>
 
-          <div className="p-3 border-t bg-white flex items-center">
-            <input
-              type="text"
-              className="flex-1 px-3 py-2 border rounded-lg focus:outline-none"
-              placeholder="Type your message..."
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              onKeyDown={(e) =>
-                e.key === "Enter" && handleSendMessage(userInput)
-              }
-            />
-            <button
-              onClick={() => handleSendMessage(userInput)}
-              className="ml-2 px-2 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700"
-            >
-              Send
-            </button>
+          <div className="p-3 border-t bg-white flex items-center gap-1 w-full">
+            {/* Flexible Input Container */}
+            <div className="flex-1 flex items-center gap-1 min-w-0">
+              <input
+                type="text"
+                className="flex-1 min-w-0 px-3 py-2 border rounded-lg focus:outline-none"
+                placeholder="Type your message..."
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
+                onKeyDown={(e) =>
+                  e.key === "Enter" && handleSendMessage(userInput)
+                }
+              />
+            </div>
+
+            {/* Action Buttons - will now stay on same line */}
+            <div className="flex items-center gap-1 flex-shrink-0">
+              <button
+                onClick={toggleMicrophone}
+                className={`p-2 rounded-full ${
+                  isListening ? "bg-red-500" : "bg-gray-200"
+                } hover:bg-blue-100 transition-colors`}
+                title={isListening ? "Stop listening" : "Start voice input"}
+              >
+                {/* Microphone icon SVG */}
+                {isListening ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-white"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-gray-600"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                )}
+              </button>
+
+              <button
+                onClick={() => handleSendMessage(userInput)}
+                disabled={!userInput.trim()}
+                className={`p-2 rounded-full ${
+                  userInput.trim()
+                    ? "bg-yellow-600 hover:bg-yellow-700"
+                    : "bg-gray-300 cursor-not-allowed"
+                } text-white transition-colors`}
+                title="Send message"
+              >
+                {/* Arrow up icon SVG */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       )}
