@@ -34,7 +34,7 @@ const Sidebar = () => {
      
 
   return (
-    <div className='fixed bottom-0 md:right-8 md:top-[40%] z-[20] h-[4rem] w-full md:h-[200px] md:w-[48px] rounded-2xl md:rounded-full bg-gray-500 bg-opacity-50'>
+    <div className='fixed bottom-0 md:right-8 md:top-[40%] z-[20] h-[4rem] w-full md:h-[200px] md:w-[48px] rounded-2xl md:rounded-full bg-none border-t-2 md:bg-gray-500 md:bg-opacity-50'>
         <AnimatePresence mode="wait">
           {isRouting && <Transition />}
         <div className="flex md:flex-col md:gap-5 md:pb-3 justify-between md:justify-center items-center h-full px-9 md:px-0">
