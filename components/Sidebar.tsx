@@ -34,10 +34,10 @@ const Sidebar = () => {
      
 
   return (
-    <div className='fixed right-8 top-[18rem] md:top-[38%] h-[11.5rem] w-[2.8rem] z-[20] rounded-full bg-gray-500 bg-opacity-50'>
+    <div className='fixed bottom-0 md:right-8 md:top-[40%] z-[20] h-[4rem] w-full md:h-[200px] md:w-[48px] rounded-2xl md:rounded-full bg-gray-500 bg-opacity-50'>
         <AnimatePresence mode="wait">
           {isRouting && <Transition />}
-        <div className="flex flex-col gap-5 pb-3 justify-center items-center h-full">
+        <div className="flex md:flex-col md:gap-5 md:pb-3 justify-between md:justify-center items-center h-full px-9 md:px-0">
             {NavLinks.map((link) => (
                 <Link 
                 key={link.name}
