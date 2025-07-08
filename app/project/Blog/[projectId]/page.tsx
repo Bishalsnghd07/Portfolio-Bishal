@@ -1,20 +1,26 @@
-'use client'
+"use client";
 
 import { ProImages } from "@/constants";
 import { ProImages2 } from "@/constants";
-import { useRouter, usePathname, useSearchParams } from "next/navigation"
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const Slug = ({ params }: { params: { projectId: string } }) => {
   const { projectId } = params;
   const router = useRouter();
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const projectInProImages = ProImages.find((project) => project.id === parseInt(projectId)); 
+  const projectInProImages = ProImages.find(
+    (project) => project.id === parseInt(projectId)
+  );
 
-  const projectInProImages2 = ProImages2.find((project) => project.id === parseInt(projectId))
+  const projectInProImages2 = ProImages2.find(
+    (project) => project.id === parseInt(projectId)
+  );
 
-  const project = pathname.includes("ProImages2") ? projectInProImages2 : projectInProImages;
+  const project = pathname.includes("ProImages2")
+    ? projectInProImages2
+    : projectInProImages;
 
   if (!project) {
     // Handle the case where the project is not found
@@ -23,8 +29,16 @@ const Slug = ({ params }: { params: { projectId: string } }) => {
 
   return (
     <div className="flex items-center min-h-screen relative">
-      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="https://www.apple.com/105/media/us/apple-vision-pro/2024/6e1432b2-fe09-4113-a1af-f20987bcfeee/anim/foundation-entertainment/small.mp4" type="video/mp4" />
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source
+          src="https://www.apple.com/105/media/us/apple-vision-pro/2024/6e1432b2-fe09-4113-a1af-f20987bcfeee/anim/foundation-entertainment/small.mp4"
+          type="video/mp4"
+        />
       </video>
 
       <div className="flex flex-wrap justify-center items-center gap-4 pt-[16rem] md:pt-[10rem] p-7 overflow-hidden">
