@@ -105,27 +105,28 @@ export const ProImages: ProjectDetailsType[] = [
 
 export const ProImages2: ProjectDetailsType[] = [
   {
-    id: 101,
+    id: 5,
     src: "/projects/E-Commerce.png",
     link: "/project/[projectId]",
-    details: "Renewals UI",
-    additionalInfo:
-      "This page has been created during my job. It contains all the information about client who buy our product or renew our product. We collect history of all the data's.",
+    details: "E-Commerce web app",
   },
   {
-    id: 102,
+    id: 6,
     src: "/projects/Stack-overflow.png",
     link: "/project/[projectId]",
+    details: "Stack Overflow web app",
   },
   {
-    id: 103,
+    id: 7,
     src: "/projects/Car-Rental.png",
     link: "/project/[projectId]",
+    details: "Car Rental web app",
   },
   {
-    id: 104,
+    id: 8,
     src: "/projects/Myntra.png",
     link: "/project/[projectId]",
+    details: "E-Commerce frontend web app",
   },
 ];
 
