@@ -294,7 +294,7 @@ interface ChatbotDataItem {
 
 export const chatbotData: ChatbotDataItem[] = [
   {
-    question: "What services do you offer as a Full Stack Developer?",
+    question: "What services I offer as a Full Stack Developer?",
     options: [
       {
         option: "Web Development",
