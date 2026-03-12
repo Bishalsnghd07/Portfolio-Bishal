@@ -295,7 +295,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ initialOpen = false }) => {
                     </div>
                   ) : (
                     <div className="text-left">
-                      <span className="inline-block px-3 py-2 bg-gray-200 text-black rounded-lg">
+                      <span className="inline-block px-3 py-2 bg-gray-200 text-black rounded-lg text-sm font-medium">
                         {msg.text}
                       </span>
                       {msg.followUpQuestions && (
